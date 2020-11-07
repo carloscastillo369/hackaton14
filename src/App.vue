@@ -1,30 +1,62 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="navbar">
+    <router-link to="/" class="logo" href="#"> <img class="img-logo" src="@/assets/logo.png" alt=""> medika.</router-link>
+    <div class="nav">
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+      <router-link to="/users">Users</router-link>
+      <router-link to="/contact">Contact</router-link>
+    </div>
   </div>
   <router-view/>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+export default {
+  
+}
+</script>
+
+<style scoped>
+#navbar {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  padding: 0 30px;
+  background: skyblue;
+
 }
 
-#nav {
-  padding: 30px;
+.logo:hover {
+  text-decoration: none;
+  font-weight: normal;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+.img-logo {
+  width: 30px;
+  height: 30px;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+img {
+  width: 60px;
+  height: 60px;
+}
+
+.nav {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: blue;
+  font-weight: bold;
+  text-decoration: underline;
 }
 </style>
